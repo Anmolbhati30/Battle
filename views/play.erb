@@ -1,1 +1,15 @@
-<%= "#{@player_1_name} vs. #{@player_2_name}" %>
+<head> 
+<title>Battle!</title>
+</head>
+
+<body>
+  <div id="title-card">
+    <%= "#{@player_1_name} vs. #{@player_2_name}" %>
+  </div>
+
+  <%= "#{@player_2_name}: #{@player_2_hp}/100 HP" %>
+
+  <form action="/attack">
+    <input type = "submit" value="Attack">
+  </div>
+</body>
