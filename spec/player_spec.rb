@@ -11,9 +11,9 @@ describe Player do
     expect(bob.hp).to eq described_class::DEFAULT_HP
   end
 
-  describe "#attack" do
-    it "reduces attacked players HP by 10" do
-      expect { bob.attack(jack) }.to change { jack.hp }.by(-10)
+  describe "#reduce_hp" do
+    it "reduces players HP by given amount" do
+      expect { jack.reduce_hp(10) }.to change { jack.hp }.by(-10)
     end
   end
 end
